@@ -2,10 +2,10 @@ import boisson from '../assets/boisson.jpeg'
 
 export const produits = [
 	{
-        id: '1ed',
+        id: '1',
 		name: 'Caprice 200ml',
 		category: 'STAR',
-        price: '12$',
+        price: '400',
         isBestVente: true,
         isSpecialPromo: true,
         light: 2,
@@ -13,10 +13,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '2ab',
+        id: '2',
 		name: 'Gouty',
 		category: 'Biscuit',
-        price: '12$',
+        price: '1600',
         isBestVente: false,
         isSpecialPromo: true,
         light: 2,
@@ -24,10 +24,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '4kk',
+        id: '3',
 		name: 'Bolo',
 		category: 'Biscuit',
-        price: '12$',
+        price: '1400',
         isBestVente: true,
         isSpecialPromo: false,
         light: 2,
@@ -35,10 +35,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '4kk',
+        id: '4',
 		name: 'Informatique',
 		category: 'Livre',
-        price: '12$',
+        price: '1200',
         isBestVente: true,
         isSpecialPromo: true,
         light: 2,
@@ -46,10 +46,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '5pl',
+        id: '5',
 		name: 'Mathématiques',
 		category: 'Livre',
-        price: '12$',
+        price: '1000',
         isBestVente: false,
         isSpecialPromo: false,
         light: 2,
@@ -57,10 +57,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '6uo',
+        id: '6',
 		name: 'Bannane',
 		category: 'Fruit',
-        price: '12$',
+        price: '125',
         isBestVente: true,
         isSpecialPromo: false,
         light: 2,
@@ -68,10 +68,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '7ie',
+        id: '7',
 		name: 'Mangues',
 		category: 'Fruit',
-        price: '12$',
+        price: '2000',
         isBestVente: false,
         isSpecialPromo: false,
         light: 2,
@@ -79,10 +79,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '8fp',
+        id: '8',
 		name: 'Litchi',
 		category: 'Fruit',
-        price: '12$',
+        price: '100',
         isBestVente: true,
         isSpecialPromo: false,
         light: 2,
@@ -90,10 +90,10 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '9vn',
+        id: '9',
 		name: 'Pomme de terre',
 		category: 'Legûmes',
-        price: '12$',
+        price: '120',
         isBestVente: false,
         isSpecialPromo: false,
         light: 2,

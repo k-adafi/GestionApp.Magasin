@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Banner from './Banner'
 import logo from '../assets/rimberio.png'
 import Carte from './Carte'
@@ -7,15 +8,19 @@ import '../styles/Layout.css'
 
 function App() {
 
+	const [carte, updateCarte] = useState([]);
+
 	return (
 		<div>
 			<Banner>
 				<img src={logo} alt='La maison jungle' className='lmj-logo' />
-				<h1 className='lmj-title'>La maison jungle</h1>
+				<h1 className='lmj-title'></h1>
 			</Banner>
 			<div className='lmj-layout-inner'>
-				<Carte />
-				<ShoppingList />
+				{/* <Carte />
+				<ShoppingList /> */}
+				<Carte carte={carte} updateCarte={updateCarte} />
+				<ShoppingList carte={carte} updateCarte={updateCarte} />
 			</div>
 			<Footer />
 		</div>

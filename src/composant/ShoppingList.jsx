@@ -1,9 +1,14 @@
+/* eslint-disable react/prop-types */
+import { useState } from 'react'
 import { produits } from '../datas/produits.jsx'
 import '../styles/shoppingList.css'
 import ProduiItem from './ProduiItem.jsx'
+import Categories from './Categories.jsx'
 
-function ShoppingList() {
 
+function ShoppingList({carte, updateCarte}) {
+
+    const [activeCategory, setActiveCategory] = useState('')
 
     const categories = produits.reduce(
         (acc, prd) => 
@@ -11,49 +16,49 @@ function ShoppingList() {
         []
     )
 
+    function addToCart(name, price) {
+		const currentPlantSaved = carte.find((prd) => prd.name === name)
+		if (currentPlantSaved) {
+			const cartFilteredCurrentPlant = carte.filter(
+				(prd) => prd.name !== name
+			)
+			updateCarte([
+				...cartFilteredCurrentPlant,
+				{ name, price, qte: currentPlantSaved.qte + 1 }
+			])
+		} else {
+			updateCarte([...carte, { name, price, qte: 1 }])
+		}
+	}
+
     return (
         <div>
 
-            {/* <ul>
-				{categories.map((cat) => (
-					<li key={cat}>{cat}</li>
-				))}
-			</ul>
-			<ul className='lmg-produit-list'>
-				{produits.map((plant) => (
-					<li key={plant.id} className='lmg-produit-item'>
-						{plant.name}
-						{plant.isSpecialOffer && <div className='lmg-sales '>Soldes</div>}
-					</li>
-				))}
-			</ul> */}
-
-
-            <ul>
-                {categories.map((cat) => (
-                    <li key={cat}>{cat}</li>
-                ))} 
-            </ul>
+            <Categories
+				categories={categories}
+				setActiveCategory={setActiveCategory}
+				activeCategory={activeCategory}
+			/>
 
             {/* <h1>Nos produits😊</h1> */}
             <ul className='lmg-produit-list'>
-                {produits.map(({id, cover, name, water, light}) => (
+                {produits.map(({id, cover, name, water, light, price, category }) => 
+                    !activeCategory || activeCategory === category ? (
 
-                    <ProduiItem
-                        key={id} // Key ajouté ici pour éviter les avertissements React
-                        id={id}
-                        cover={cover}
-                        name={name}
-                        water={water}
-                        light={light}
-                    />
+                        <div key={id}>
+                            <ProduiItem 
+                                id={id} 
+                                cover={cover} 
+                                name={name} 
+                                water={water} 
+                                light={light} 
+                                price={price} 
+                            />
+                            <button onClick={() => addToCart(name, price)}>Ajouter</button>
+                        </div>
+                    ): null   
 
-                    // <li key={prod.id} className='lmg-produit-item'>
-                    //     {prod.name}
-                    //     {prod.isSpecialPromo && <div className='lmg-sales'>Soldes</div>}
-                        
-                    // </li> 
-                ))}
+                )}
             </ul>
         </div>
        

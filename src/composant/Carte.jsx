@@ -1,11 +1,18 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react' 
 import '../styles/carte.css'
 
-function Carte (){
+function Carte ({carte, updateCarte}){
 
-    const monsteraPrice = 8
-	const [cart, updateCart] = useState(0)
-	const [isOpen, setIsOpen] = useState(true)
+    //const monsteraPrice = 8;
+	// const [cart, updateCart] = useState(0)
+	const [isOpen, setIsOpen] = useState(true);
+
+    const total = carte.reduce(
+        (acc, produitype) => acc + produitype.qte * produitype.price, 
+        0
+    )
+    //acc : accimulateur de reduce
 
 	return isOpen ? (
 		<div className='lmj-cart'>
@@ -16,12 +23,16 @@ function Carte (){
 				Fermer
 			</button>
 			<h2>Panier</h2>
-			<div>Monstera : {monsteraPrice} Ar</div>
+			{/* <div>Monstera : {monsteraPrice} Ar</div> */}
+            {carte.map(({name, price, qte }, index) => (
+                <div key={`${name}-${index}`}>
+                    {name} {price} Ar x {qte}
+                </div>
+            ))}
+
+            <h3>Totale : {total} Ar</h3>
             
-			<button onClick={() => updateCart(cart + 1)}>Ajouter</button>
-            <button onClick={() => updateCart(0)}>Vider le panier</button>
-			<h3>Total : {monsteraPrice * cart} Ar</h3>
-            
+            <button onClick={() => updateCarte([])}>Vider le panier</button>        
             
 		</div>
 	) : (
