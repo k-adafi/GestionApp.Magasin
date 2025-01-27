@@ -1,10 +1,11 @@
 import CareScale from './CareScale'
 import '../styles/produiItem.css'
+import { Container, Row, Col } from "reactstrap";
 
 
 
 // eslint-disable-next-line react/prop-types
-function ProduiItem({id, name, cover, light, water}) {
+function ProduiItem({id, name, cover, price, light, water}) {
 
     function handleClick(produitName) {
 
@@ -24,7 +25,14 @@ function ProduiItem({id, name, cover, light, water}) {
 
         <li className='lmj-plant-item' onClick={() => handleClick(name)}>
             <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
-            {name}
+            <Row>
+                <Col>
+                    {name}
+                </Col>
+                <Col>
+                    {price} Ar
+                </Col>
+            </Row>
             <div>
                 <CareScale careType='water' scaleValue={water} />
                 <CareScale careType='light' scaleValue={light} />

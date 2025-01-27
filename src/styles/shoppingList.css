@@ -1,14 +1,13 @@
 .lmg-produit-list {
 	list-style-type: none;
-	padding: 32px;
+	padding-left: 32px;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 800px;
+	max-width: 1800px;
 }
 
 .lmg-produit-item {
 	list-style-type: none;
-	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -22,4 +21,17 @@
 	color: white;
 	padding: 5px 10px;
 	background-color: #31b572;
+}
+
+.lmg-btn-ajout{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 10px;
+	border-radius: 10%;
+	background-color: #6bdd54;
+	color: rgb(0, 0, 0);
+	margin-bottom: 20px;
+	cursor: pointer;
 }

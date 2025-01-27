@@ -1,9 +1,11 @@
+
+
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react' 
 import { Link } from 'react-router-dom';
 import '../styles/carte.css'
 
-function Carte ({carte, updateCarte}){
+function Panier ({carte, updateCarte}){
 
     //const monsteraPrice = 8;
 	// const [cart, updateCart] = useState(0)
@@ -94,4 +96,4 @@ function Carte ({carte, updateCarte}){
 
 }
 
-export default Carte
+export default Panier

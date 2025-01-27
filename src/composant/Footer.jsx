@@ -19,14 +19,15 @@ function Footer() {
 			<div className='lmj-footer-elem'>
 				Envoye-nous vos messages 😁!
 			</div>
-			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
 			<input
-				placeholder='Entrez votre mail'
+				placeholder='Votre mail'
 				onChange={handleInput}
 				value={inputValue}
 				onBlur={handleBlur}
+				className='lmg-footer-input'
 			/>
-            <button onClick={handleInput}>Envoyer</button>
+			<textarea className='lmg-footer-text' name="commentaire" placeholder='Entrez vos commentaire' id=""></textarea>
+            <button className='lmg-btn-envoyer' onClick={handleInput}>Envoyer</button>
 
             <div>
                 <h5>© 2025 by KADAFI Ben</h5>

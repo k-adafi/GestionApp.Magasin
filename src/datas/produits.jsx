@@ -24,17 +24,6 @@ export const produits = [
         cover: boisson
 	},
 	{
-        id: '3',
-		name: 'Bolo',
-		category: 'Biscuit',
-        price: '1400',
-        isBestVente: true,
-        isSpecialPromo: false,
-        light: 2,
-		water: 3,
-        cover: boisson
-	},
-	{
         id: '4',
 		name: 'Informatique',
 		category: 'Livre',
