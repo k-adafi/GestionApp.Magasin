@@ -1,0 +1,4 @@
+body {
+	margin: 0; /* Supprime les marges par défaut du body */
+	padding-top: 80px; /* Ajoute un espace sous la bannière pour éviter que le contenu soit masqué */
+}

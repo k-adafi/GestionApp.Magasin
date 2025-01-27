@@ -7,7 +7,15 @@
 	justify-content: space-between; /* Espace entre les éléments */
 	align-items: center; /* Alignement vertical */
 	flex-wrap: wrap; /* Permet de passer en plusieurs lignes si nécessaire */
+	position: fixed; /* Rend la bannière fixe */
+	top: 0; /* Place la bannière en haut de la page */
+	left: 0; /* Alignement à gauche */
+	width: 100%; /* La bannière prend toute la largeur de la fenêtre */
+	background-color: white; /* Assure un fond blanc pour la bannière */
+	z-index: 1000; /* Place la bannière au-dessus des autres éléments */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
 }
+
 
 .titre-my{
 	color: #313ab5;

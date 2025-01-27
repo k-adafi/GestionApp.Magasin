@@ -1,5 +1,11 @@
-import boisson from '../assets/images/boisson.jpeg'
-import biscuit from '../assets/images/biscuit.jpg'
+import boisson from '../assets/images/boisson.jpeg';
+import biscuit from '../assets/images/biscuit.jpg';
+import litchi from '../assets/images/litchi.jpeg';
+import bannane from '../assets/images/bannane.jpeg';
+import mangue from '../assets/images/mangue.jpg';
+import pomme_terre from '../assets/images/pomme-de-terre.jpeg';
+import livre_info from '../assets/images/livre-info.png';
+import livre_math from '../assets/images/livre-math.png';
 
 export const produits = [
 	{
@@ -35,7 +41,7 @@ export const produits = [
         isSpecialPromo: true,
         light: 2,
 		water: 3,
-        cover: boisson,
+        cover: livre_info,
         stock: 67
 	},
 	{
@@ -47,7 +53,7 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson,
+        cover: livre_math,
         stock: 34
 	},
 	{
@@ -59,7 +65,7 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson,
+        cover: bannane,
         stock: 90
 	},
 	{
@@ -71,7 +77,7 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson,
+        cover: mangue,
         stock: 89
 	},
 	{
@@ -83,7 +89,7 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson,
+        cover: litchi,
         stock: 55
 	},
 	{
@@ -95,7 +101,7 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson,
+        cover: pomme_terre,
         stock: 79
 	}
 ]
