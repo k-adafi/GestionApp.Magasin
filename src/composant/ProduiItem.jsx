@@ -26,17 +26,17 @@ function ProduiItem({id, name, cover, price, light, water}) {
         <li className='lmj-plant-item' onClick={() => handleClick(name)}>
             <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
             <Row>
-                <Col>
+                <Col className='col-9'>
                     {name}
                 </Col>
-                <Col>
-                    {price} Ar
+                <Col className='col-3'>
+                    {price}Ar
                 </Col>
             </Row>
-            <div>
+            {/* <div>
                 <CareScale careType='water' scaleValue={water} />
                 <CareScale careType='light' scaleValue={light} />
-            </div>
+            </div> */}
         </li>
 
     );

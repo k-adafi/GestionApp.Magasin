@@ -2,7 +2,7 @@
 .titre-banner {
 	color: black;
 	text-align: right;
-	padding: 5px;
+	padding: 10px;
 	border-bottom: solid 3px black;
 	display: flex;
 	justify-content: flex-start;

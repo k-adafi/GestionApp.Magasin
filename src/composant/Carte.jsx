@@ -30,7 +30,7 @@ function Carte ({carte, updateCarte}){
 			>
 				Fermer
 			</button>
-            <p>---------------------------</p>
+            <p>--------------------------</p>
 
             <Link className='lmg-btn-gerer' to="/">Acceuil</Link>
 
@@ -47,7 +47,7 @@ function Carte ({carte, updateCarte}){
             
             <button className='lmg-btn-vider' onClick={() => updateCarte([])}>Vider le panier</button>
 
-            <p>---------------------------</p>
+            <p>--------------------------</p>
 
             <Link className='lmg-btn-gerer' to="/gestion-produit">Gérer mes produits</Link>          
             
