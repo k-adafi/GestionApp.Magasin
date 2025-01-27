@@ -7,6 +7,8 @@ import Footer from './Footer'
 import ShoppingList from './ShoppingList'
 import '../styles/Layout.css'
 import MesProduits from './MesProduits'
+import CarteProd from './CarteProd'
+import BannerProd from './BannerProd'
 
 function App() {
 
@@ -28,11 +30,11 @@ function App() {
 			}/>
 			<Route path='/gestion-produit' element = {
 				<div>
-					<Banner>
+					<BannerProd>
 						<h1 className='lmj-title'></h1>
-					</Banner>
+					</BannerProd>
 					<div className='lmj-layout-inner'>
-						<Carte carte={carte} updateCarte={updateCarte} />
+						<CarteProd/>
 						<MesProduits/>
 					</div>
 					<Footer />

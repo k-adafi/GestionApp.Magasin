@@ -5,13 +5,17 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	width: 338px;
+	width: 238px; /* Largeur fixe pour les grands écrans */
+	box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
 }
 
-/* .lmj-cart-add-button {
-	margin-left: 32px;
-	cursor: pointer;
-} */
+/* Fermé */
+.lmj-cart-closed {
+	padding: 32px;
+	width: 238px; /* Largeur fixe pour les grands écrans */
+	background-color: #313ab5;
+	box-sizing: border-box;
+}
 
 .lmj-cart-toggle-button {
 	background: none;
@@ -22,21 +26,9 @@
 	align-self: self-start;
 	padding: 0;
 	color: white;
-	cursor: pointer;
 }
 
-.lmj-cart-closed {
-	padding: 32px;
-	width: 338px;
-	background-color: #313ab5;
-}
-
-.lmj-cart-closed > button {
-	color: white;
-	cursor: pointer;
-}
-
-.lmg-btn-vider{
+.lmg-btn-vider {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 10%;
@@ -45,7 +37,7 @@
 	cursor: pointer;
 }
 
-.lmg-btn-gerer{
+.lmg-btn-gerer {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 10%;
@@ -54,4 +46,28 @@
 	margin-top: 20px;
 	text-align: center;
 	cursor: pointer;
+}
+
+/* Responsivité : Tablettes et Smartphones */
+@media (max-width: 1024px) { /* Tablettes */
+	.lmj-cart,
+	.lmj-cart-closed {
+		width: 90%; /* Adapte la largeur à 90% de l'écran */
+	}
+}
+
+@media (max-width: 768px) { /* Smartphones */
+	.lmj-cart,
+	.lmj-cart-closed {
+		width: 95%; /* Adapte la largeur à 95% de l'écran */
+		padding: 16px; /* Réduit le padding pour éviter l'encombrement */
+	}
+}
+
+@media (max-width: 480px) { /* Petits smartphones */
+	.lmj-cart,
+	.lmj-cart-closed {
+		width: 100%; /* Prend toute la largeur disponible */
+		padding: 10px; /* Réduction du padding pour s'adapter à l'espace limité */
+	}
 }

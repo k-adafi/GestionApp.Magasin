@@ -22,46 +22,45 @@ function Carte ({carte, updateCarte}){
     }, [total])
     
 
-	return isOpen ? (
-		<div className='lmj-cart'>
-			<button
-				className='lmj-cart-toggle-button'
-				onClick={() => setIsOpen(false)}
-			>
-				Fermer
-			</button>
-            <p>--------------------------</p>
+	return <div style={{ display: 'flex', justifyContent: 'center' }}>
+                {isOpen ? (
+                    <div className="lmj-cart">
+                        <button
+                            className="lmj-cart-toggle-button"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Fermer
+                        </button>
+                        <p>--------------------------</p>
+                        <h2>Panier</h2>
+                        {carte.map(({ name, price, qte }, index) => (
+                            <div key={`${name}-${index}`}>
+                                {name} {price} Ar x {qte}
+                            </div>
+                        ))}
+                        <h5>Totale : {total} Ar</h5>
+                        <button className="lmg-btn-vider" onClick={() => updateCarte([])}>
+                            Vider le panier
+                        </button>
+                        <p>--------------------------</p>
+                        <Link className="lmg-btn-gerer" to="/gestion-produit">
+                            Gérer mes produits
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="lmj-cart-closed">
+                        <button
+                            className="lmj-cart-toggle-button"
+                            onClick={() => setIsOpen(true)}
+                        >
+                            Ouvrir le menu
+                        </button>
+                    </div>
+                )}
+            </div>
 
-            <Link className='lmg-btn-gerer' to="/">Acceuil</Link>
 
-           
-			<h2>Panier</h2>
-			{/* <div>Monstera : {monsteraPrice} Ar</div> */}
-            {carte.map(({name, price, qte }, index) => (
-                <div key={`${name}-${index}`}>
-                    {name} {price} Ar x {qte}
-                </div>
-            ))}
-
-            <h3>Totale : {total} Ar</h3>
-            
-            <button className='lmg-btn-vider' onClick={() => updateCarte([])}>Vider le panier</button>
-
-            <p>--------------------------</p>
-
-            <Link className='lmg-btn-gerer' to="/gestion-produit">Gérer mes produits</Link>          
-            
-		</div>
-	) : (
-		<div className='lmj-cart-closed'>
-			<button
-				className='lmj-cart-toggle-button'
-				onClick={() => setIsOpen(true)}
-			>
-				Ouvrir le menu
-			</button>
-		</div>
-	)
+	
 
 
     // const [cart, updateCart] = useState(0);

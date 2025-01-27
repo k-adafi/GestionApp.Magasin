@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/footer.css'
 
 function Footer() {
@@ -29,8 +30,8 @@ function Footer() {
 			<textarea className='lmg-footer-text' name="commentaire" placeholder='Entrez vos commentaire' id=""></textarea>
             <button className='lmg-btn-envoyer' onClick={handleInput}>Envoyer</button>
 
-            <div>
-                <h5>© 2025 by KADAFI Ben</h5>
+            <div className='mt-3'>
+                <h6>© 2025 by KADAFI Ben</h6>
             </div>
 
 		</footer>

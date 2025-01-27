@@ -1,7 +1,7 @@
 import '../styles/banner.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Banner() {
+function BannerProd() {
 	return (
 		<div className="container-fluide">
 			<div className="titre-banner">
@@ -12,20 +12,10 @@ function Banner() {
 				</h2>
 
 				{/* Sous-titre */}
-				<h1 className="titre-tonga">Bienvenu - Tonga soa</h1>
-
-				{/* Champ de recherche et bouton */}
-				<div>
-					<input
-						type="text"
-						className="lmg-input"
-						placeholder="Recherche ..."
-					/>
-					<button className="lmg-btn-reche">Rechercher</button>
-				</div>
+				<h1 className="titre-tonga">Gestion des produits</h1>
 			</div>
 		</div>
 	);
 }
 
-export default Banner;
+export default BannerProd;
