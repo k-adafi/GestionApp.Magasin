@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react' 
+import { useState, useEffect } from 'react'; 
 import { Link } from 'react-router-dom';
-import '../styles/carte.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/carte.css';
 
 function Carte ({carte, updateCarte}){
 
@@ -38,7 +39,7 @@ function Carte ({carte, updateCarte}){
                                 {name} {price} Ar x {qte}
                             </div>
                         ))}
-                        <h5>Totale : {total} Ar</h5>
+                        <h5 className='mt-3'>Totale : {total} Ar</h5>
                         <button className="lmg-btn-vider" onClick={() => updateCarte([])}>
                             Vider le panier
                         </button>

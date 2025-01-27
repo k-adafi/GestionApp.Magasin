@@ -5,7 +5,7 @@ import { Container, Row, Col } from "reactstrap";
 
 
 // eslint-disable-next-line react/prop-types
-function ProduiItem({id, name, cover, price, light, water}) {
+function ProduiItem({id, name, cover, price, light, water, stock}) {
 
     function handleClick(produitName) {
 
@@ -27,10 +27,15 @@ function ProduiItem({id, name, cover, price, light, water}) {
             <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
             <Row>
                 <Col className='col-9'>
-                    {name}
+                    <strong>{name}</strong>
                 </Col>
                 <Col className='col-3'>
                     {price}Ar
+                </Col>
+            </Row>
+            <Row>
+                <Col className='col-9'>
+                    {stock}
                 </Col>
             </Row>
             {/* <div>

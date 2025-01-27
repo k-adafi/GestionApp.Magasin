@@ -31,6 +31,20 @@ function ShoppingList({carte, updateCarte}) {
 			updateCarte([...carte, { name, price, qte: 1 }])
 		}
 	}
+    function anulerToCart(name, price) {
+		const currentPlantSaved = carte.find((prd) => prd.name === name)
+		if (currentPlantSaved) {
+			const cartFilteredCurrentPlant = carte.filter(
+				(prd) => prd.name !== name
+			)
+			updateCarte([
+				...cartFilteredCurrentPlant,
+				{ name, price, qte: currentPlantSaved.qte = 0 }
+			])
+		} else {
+			updateCarte([...carte, { name, price, qte: 1 }])
+		}
+	}
 
     return (
         <div>
@@ -43,7 +57,7 @@ function ShoppingList({carte, updateCarte}) {
 
             {/* <h1>Nos produits😊</h1> */}
             <ul className='lmg-produit-list'>
-                {produits.map(({id, cover, name, water, light, price, category }) => 
+                {produits.map(({id, cover, name, water, light, price, category, stock }) => 
                     !activeCategory || activeCategory === category ? (
 
                         <div key={id}>
@@ -53,9 +67,17 @@ function ShoppingList({carte, updateCarte}) {
                                 name={name}
                                 price={price}
                                 water={water} 
-                                light={light}  
+                                light={light}
+                                stock={stock}  
                             />
-                            <button className='lmg-btn-ajout' onClick={() => addToCart(name, price)}>Ajouter</button>
+                            <div className='row'>
+                                <div className="col-6">
+                                    <button className='lmg-btn-ajout' onClick={() => addToCart(name, price)}>Ajouter</button>
+                                </div>
+                                <div className="col-6">
+                                    <button className='lmg-btn-ajout' onClick={() => anulerToCart(name, price)}>Annuler</button>
+                                </div>
+                            </div>
                         </div>
                     ): null   
 

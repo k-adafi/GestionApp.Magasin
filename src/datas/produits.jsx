@@ -1,4 +1,5 @@
-import boisson from '../assets/boisson.jpeg'
+import boisson from '../assets/images/boisson.jpeg'
+import biscuit from '../assets/images/biscuit.jpg'
 
 export const produits = [
 	{
@@ -10,7 +11,8 @@ export const produits = [
         isSpecialPromo: true,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: boisson,
+        stock: 33
 	},
 	{
         id: '2',
@@ -21,7 +23,8 @@ export const produits = [
         isSpecialPromo: true,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: biscuit,
+        stock: 12
 	},
 	{
         id: '4',
@@ -32,7 +35,8 @@ export const produits = [
         isSpecialPromo: true,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: boisson,
+        stock: 67
 	},
 	{
         id: '5',
@@ -43,7 +47,8 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: boisson,
+        stock: 34
 	},
 	{
         id: '6',
@@ -54,7 +59,8 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: boisson,
+        stock: 90
 	},
 	{
         id: '7',
@@ -65,7 +71,8 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: boisson,
+        stock: 89
 	},
 	{
         id: '8',
@@ -76,7 +83,8 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: boisson,
+        stock: 55
 	},
 	{
         id: '9',
@@ -87,6 +95,7 @@ export const produits = [
         isSpecialPromo: false,
         light: 2,
 		water: 3,
-        cover: boisson
+        cover: boisson,
+        stock: 79
 	}
 ]

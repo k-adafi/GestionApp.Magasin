@@ -1,7 +1,7 @@
 .lmg-produit-list {
 	list-style-type: none;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 23px;
+	padding-right: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1800px;
@@ -27,12 +27,31 @@
 .lmg-btn-ajout{
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 2px;
+	padding-bottom: px;
 	margin-left: 10px;
 	border-radius: 10%;
 	background-color: #6bdd54;
 	color: rgb(0, 0, 0);
 	margin-bottom: 20px;
 	cursor: pointer;
+}
+
+
+/* Pour les petits smartphones (écrans < 480px) */
+@media (max-width: 480px) {
+	.lmg-produit-list {
+		width: 100%; /* Prend toute la largeur disponible */
+		padding: 5px; /* Réduction des marges */
+	}
+
+	.lmg-produit-item {
+		width: 100%; /* Les produits occupent toute la largeur */
+		height: auto; /* Ajuste automatiquement la hauteur */
+	}
+
+	.lmg-btn-ajout {
+		font-size: 12px;
+		padding: 8px;
+	}
 }
