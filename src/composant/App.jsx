@@ -9,6 +9,11 @@ import '../styles/Layout.css'
 import MesProduits from './MesProduits'
 import CarteProd from './CarteProd'
 import BannerProd from './BannerProd'
+import Inscription from '../authentification/inscription/Inscription'
+import Connexion from '../authentification/connexion/Connexion'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Bienvenue from './Bienvenu'
+import Bonjour from './Bonjour'
 
 function App() {
 
@@ -17,6 +22,26 @@ function App() {
 	return (
 		<Routes>
 			<Route path='/' element = {
+				<div className='row'>
+					<div className="col">
+						<Bienvenue />
+					</div>
+					<div className="col">
+						<Inscription />
+					</div>
+				</div>
+			}/>
+			<Route path='/login' element = {
+				<div className='row'>
+					<div className="col">
+						<Bonjour />
+					</div>
+					<div className="col">
+						<Connexion />
+					</div>
+				</div>
+			}/>
+			<Route path='/produit' element = {
 				<div>
 					<Banner>
 						<h1 className='lmj-title'></h1>
